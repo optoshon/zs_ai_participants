@@ -1,0 +1,7 @@
+openai
+python-dotenv
+jupyter
+ipykernel
+azure-identity
+tiktoken
+pandas
