@@ -1,0 +1,5 @@
+| Phase | Core Focus | Representative Build | Primary Outcome |
+|---------|---------|---------|---------|
+| **Phase 1** | AI Engineering Foundations | Healthcare Policy Prompt Framework, Benefits Information Assistant, and first Healthcare Operations Agent | Participants establish the technical foundations required to integrate LLMs and build a basic tool-enabled agent. |
+| **Phase 2** | Enterprise RAG & Evaluation | Healthcare Policy Knowledge Base, Semantic Search Engine, and Claims & Benefits Assistant | Participants build grounded RAG applications and evaluate retrieval quality, reliability, and governance. |
+| **Phase 3** | Agentic Systems & Capstone | Healthcare Support Agent, Claims Intelligence Agent, and Healthcare AI Copilot | Participants combine tools, RAG, structured data, orchestration, evaluation, and guardrails in an end-to-end solution. |
