@@ -1,0 +1,47 @@
+[
+  {
+    "doc_id": "GOLD-PPO-2026",
+    "filename": "01_Gold_PPO_2026_Benefits_Authorization.pdf",
+    "title": "Gold PPO 2026 - Benefits & Authorization Policy",
+    "plan_type": "Gold PPO",
+    "effective_date": "2026-01-01",
+    "policy_domain": "Benefits & Authorization",
+    "status": "Active"
+  },
+  {
+    "doc_id": "SILVER-HMO-2026",
+    "filename": "02_Silver_HMO_2026_Benefits_Authorization.pdf",
+    "title": "Silver HMO 2026 - Benefits & Authorization Policy",
+    "plan_type": "Silver HMO",
+    "effective_date": "2026-01-01",
+    "policy_domain": "Benefits & Authorization",
+    "status": "Active"
+  },
+  {
+    "doc_id": "IMG-UM-2026",
+    "filename": "03_Advanced_Imaging_Utilization_Management_2026.pdf",
+    "title": "Advanced Imaging Utilization Management Policy - 2026",
+    "plan_type": "All Commercial Plans",
+    "effective_date": "2026-01-01",
+    "policy_domain": "Utilization Management",
+    "status": "Active"
+  },
+  {
+    "doc_id": "REHAB-2026",
+    "filename": "04_Rehabilitation_Therapy_Policy_2026.pdf",
+    "title": "Rehabilitation Therapy Management Policy - 2026",
+    "plan_type": "Multiple Plans",
+    "effective_date": "2026-01-01",
+    "policy_domain": "Rehabilitation",
+    "status": "Active"
+  },
+  {
+    "doc_id": "CLAIMS-OPS-2026",
+    "filename": "05_Claims_Benefits_Appeals_Operations_2026.pdf",
+    "title": "Claims, Benefits & Appeals Operations Guide - 2026",
+    "plan_type": "All Commercial Plans",
+    "effective_date": "2026-01-01",
+    "policy_domain": "Claims Operations",
+    "status": "Active"
+  }
+]

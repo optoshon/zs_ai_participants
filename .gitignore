@@ -1,4 +1,7 @@
-notebook/*_trainer_annotated.ipynb
-notebook/.env
-notebook/02_prompt_engineering_cost_design_trainer_annotated.ipynb
-notebook/Module4_Facilitator_Guide.ipynb  
+notebook/Phase_1/*_trainer_annotated.ipynb
+notebook/Phase_2/.env
+notebook/Phase_1/02_prompt_engineering_cost_design_trainer_annotated.ipynb
+notebook/Phase_1/Module4_Facilitator_Guide.ipynb
+requirements.txt
+*.pptx
+*.docx

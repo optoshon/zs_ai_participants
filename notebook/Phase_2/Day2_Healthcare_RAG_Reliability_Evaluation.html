@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 - Enterprise RAG Reliability & Evaluation</title>
+<style>
+:root{
+  --navy:#14324A;
+  --blue:#2E5D7B;
+  --green:#2E6A55;
+  --mint:#EAF4EF;
+  --ice:#EEF4F8;
+  --gold:#B58A3B;
+  --text:#1E2A32;
+  --muted:#63717A;
+  --line:#D9E2E8;
+  --white:#FFFFFF;
+  --bg:#F6F8FA;
+  --danger:#8A3B3B;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+.wrapper{max-width:1180px;margin:0 auto;padding:28px}
+.hero{
+  background:linear-gradient(135deg,var(--navy),#244D68);
+  color:white;
+  padding:42px 46px;
+  border-radius:18px;
+  box-shadow:0 12px 32px rgba(20,50,74,.16);
+  margin-bottom:24px;
+}
+.eyebrow{font-size:13px;letter-spacing:1.7px;text-transform:uppercase;opacity:.82;font-weight:700}
+.hero h1{margin:8px 0 10px;font-size:36px;line-height:1.15}
+.hero p{margin:0;max-width:900px;font-size:18px;color:#E7F0F5}
+.section{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px;
+  margin:20px 0;
+  box-shadow:0 6px 18px rgba(28,49,64,.05);
+}
+.section h2{
+  margin:0 0 14px;
+  font-size:24px;
+  color:var(--navy);
+}
+.section h3{color:var(--green);margin-top:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px;
+  background:#fff;
+}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;color:var(--muted)}
+.problem{border-left:5px solid var(--danger);background:#FFF8F7}
+.solution{border-left:5px solid var(--green);background:#F7FBF9}
+.activity{border-left:5px solid var(--gold);background:#FFFDF7}
+.kpi{background:var(--ice);border:none}
+.kpi strong{display:block;color:var(--navy);font-size:20px}
+.flow{
+  display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-top:18px
+}
+.step{
+  flex:1 1 130px;
+  background:var(--ice);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+  font-weight:650;
+  color:var(--navy);
+  position:relative;
+}
+.arrow{
+  display:flex;align-items:center;justify-content:center;
+  color:var(--green);font-size:23px;font-weight:800;padding:0 2px
+}
+.callout{
+  background:var(--mint);
+  border:1px solid #CFE5D9;
+  color:#214D3F;
+  padding:16px 18px;
+  border-radius:12px;
+  font-weight:600;
+}
+ul{padding-left:22px}
+li{margin:7px 0}
+.tag{
+  display:inline-block;padding:5px 9px;border-radius:999px;
+  background:var(--ice);color:var(--blue);font-size:12px;font-weight:700;
+  margin:3px 5px 3px 0
+}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--navy);color:white;font-size:13px}
+tr:nth-child(even) td{background:#FAFBFC}
+.footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}
+@media(max-width:800px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .hero h1{font-size:29px}
+  .wrapper{padding:16px}
+  .hero{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <section class="hero">
+    <div class="eyebrow">Day 2 • Enterprise RAG Hands-On</div>
+    <h1>From Retrieval to a Grounded, Evaluated Healthcare Policy Assistant</h1>
+    <p>How do we turn retrieved policy evidence into a useful business answer — while preventing hallucination, preserving citations and proving that the RAG system is reliable?</p>
+  </section>
+
+  <section class="section">
+    <h2>1. Business Problem Statement</h2>
+    <div class="grid-2">
+      <div class="card problem">
+        <h3>AI can answer beyond the available evidence</h3>
+        <p>A language model may produce a plausible policy answer even when the policy corpus does not contain the requested information.</p>
+      </div>
+      <div class="card problem">
+        <h3>Correct-looking answers are difficult to audit</h3>
+        <p>Business users need to know which policy, section and page support the answer. An answer without evidence is hard to trust in regulated operations.</p>
+      </div>
+      <div class="card problem">
+        <h3>Too much context can reduce quality</h3>
+        <p>Sending every potentially relevant chunk increases token usage and can introduce conflicting or distracting evidence.</p>
+      </div>
+      <div class="card problem">
+        <h3>A single successful demo proves very little</h3>
+        <p>Enterprise adoption requires repeatable evaluation across a test set — not confidence based on one or two visually good responses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2. What We Are Trying to Achieve</h2>
+    <div class="grid-3">
+      <div class="card kpi"><strong>Grounded Answers</strong><p>Generate only from retrieved policy evidence and refuse when evidence is insufficient.</p></div>
+      <div class="card kpi"><strong>Source Evidence</strong><p>Return citations tied to the actual retrieved policy sections.</p></div>
+      <div class="card kpi"><strong>Measurable Reliability</strong><p>Evaluate retrieval, groundedness, faithfulness and unsupported claims across a fixed test set.</p></div>
+    </div>
+    <div class="callout" style="margin-top:18px">
+      Day 2 principle: A strong RAG system is not one that answers every question. It is one that answers when supported and fails safely when evidence is missing.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>3. Participant Activity</h2>
+    <div class="card activity">
+      <h3>Challenge: Make the RAG System Fail Safely</h3>
+      <p><b>Business question:</b> “What is the annual acupuncture visit limit under the Gold PPO plan?”</p>
+      <p>The supplied policy corpus intentionally does not contain this benefit limit.</p>
+      <ul>
+        <li>Run the question through the end-to-end RAG assistant.</li>
+        <li>Inspect the retrieved chunks and verify whether evidence exists.</li>
+        <li>Confirm that the assistant returns an insufficient-evidence response rather than inventing a number.</li>
+        <li>If required, strengthen the grounding instruction.</li>
+        <li>Run the case through the evaluation notebook and inspect groundedness, faithfulness and unsupported-claim signals.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>4. High-Level Technical Implementation</h2>
+    <div class="flow">
+      <div class="step">User Question</div><div class="arrow">→</div>
+      <div class="step">Query Embedding</div><div class="arrow">→</div>
+      <div class="step">Vector / Hybrid Retrieval</div><div class="arrow">→</div>
+      <div class="step">Context Assembly</div><div class="arrow">→</div>
+      <div class="step">Azure LLM</div><div class="arrow">→</div>
+      <div class="step">Grounded Answer + Citations</div><div class="arrow">→</div>
+      <div class="step">Evaluation</div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Technical Layer</th><th>What We Implement</th><th>Business Control Introduced</th></tr>
+        <tr><td>Retrieval</td><td>Retrieve the most relevant chunks, optionally with plan filters.</td><td>Limits evidence to the most relevant business scope.</td></tr>
+        <tr><td>Context assembly</td><td>Attach source labels to each retrieved chunk before the LLM call.</td><td>Makes citations deterministic and traceable.</td></tr>
+        <tr><td>Grounded generation</td><td>Instruct the Azure LLM to use only provided policy context.</td><td>Reduces unsupported claims and hallucination.</td></tr>
+        <tr><td>Failure handling</td><td>Return “Insufficient information” when context cannot support the answer.</td><td>Creates a controlled safe-failure path.</td></tr>
+        <tr><td>Context tuning</td><td>Compare top-k values and demonstrate context explosion.</td><td>Balances completeness, cost, latency and distraction.</td></tr>
+        <tr><td>Hybrid retrieval</td><td>Combine lexical and semantic ranking signals.</td><td>Improves robustness where exact terms and semantic meaning both matter.</td></tr>
+        <tr><td>Evaluation</td><td>Run a fixed question set and measure retrieval hit, citation rate, groundedness, faithfulness and unsupported claims.</td><td>Turns RAG quality into something measurable and repeatable.</td></tr>
+        <tr><td>Audit trace</td><td>Persist question, retrieved evidence, answer, token usage and evaluation result.</td><td>Supports explainability, troubleshooting and governance review.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>5. Reliability Improvement Loop</h2>
+    <div class="flow">
+      <div class="step">Run Test Set</div><div class="arrow">→</div>
+      <div class="step">Find Failure</div><div class="arrow">→</div>
+      <div class="step">Change Retrieval / Prompt</div><div class="arrow">→</div>
+      <div class="step">Re-run Same Test Set</div><div class="arrow">→</div>
+      <div class="step">Compare Scorecard</div>
+    </div>
+    <div class="callout" style="margin-top:18px">
+      The important shift is from “Does the demo look good?” to “Can we prove the system improved against the same evaluation baseline?”
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>6. Expected Business Outcome</h2>
+    <div class="grid-2">
+      <div class="card solution">
+        <h3>Before</h3>
+        <p>Answers may sound confident but have unclear evidence, inconsistent behavior and no repeatable way to measure quality.</p>
+      </div>
+      <div class="card solution">
+        <h3>After</h3>
+        <p>The assistant retrieves approved policy evidence, generates citation-backed answers, refuses unsupported questions and produces evaluation traces that can be reviewed and compared.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>7. What Participants Should Be Able to Explain</h2>
+    <span class="tag">RAG Pipeline</span><span class="tag">Grounding</span><span class="tag">Citations</span>
+    <span class="tag">Context Explosion</span><span class="tag">Hybrid Retrieval</span>
+    <span class="tag">Groundedness</span><span class="tag">Faithfulness</span><span class="tag">Auditability</span>
+    <ul>
+      <li>Why an insufficient-information response can be the correct business outcome.</li>
+      <li>Why citations should originate from retrieval metadata rather than being generated freely by the model.</li>
+      <li>Why RAG evaluation must use a repeatable test set and scorecard.</li>
+      <li>How retrieval changes can be measured instead of judged subjectively.</li>
+    </ul>
+  </section>
+
+  <div class="footer">Synthetic healthcare policy corpus used for training. No real member data or PHI.</div>
+</div>
+</body>
+</html>

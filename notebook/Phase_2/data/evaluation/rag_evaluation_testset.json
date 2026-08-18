@@ -1,0 +1,108 @@
+[
+  {
+    "id": "Q01",
+    "question": "For a Gold PPO member, does the 11th physical therapy visit require prior authorization?",
+    "expected_answer_keywords": [
+      "prior authorization",
+      "11th"
+    ],
+    "expected_doc_id": "GOLD-PPO-2026",
+    "expected_section": "SECTION 3: PHYSICAL THERAPY",
+    "plan_type": "Gold PPO"
+  },
+  {
+    "id": "Q02",
+    "question": "For a Silver HMO member, does the 7th physical therapy visit require prior authorization?",
+    "expected_answer_keywords": [
+      "prior authorization",
+      "7th"
+    ],
+    "expected_doc_id": "SILVER-HMO-2026",
+    "expected_section": "SECTION 3: PHYSICAL THERAPY",
+    "plan_type": "Silver HMO"
+  },
+  {
+    "id": "Q03",
+    "question": "Does emergency department MRI imaging require prior authorization?",
+    "expected_answer_keywords": [
+      "does not require",
+      "emergency"
+    ],
+    "expected_doc_id": "IMG-UM-2026",
+    "expected_section": "SECTION 4: EMERGENCY AND INPATIENT EXCEPTIONS",
+    "plan_type": null
+  },
+  {
+    "id": "Q04",
+    "question": "How many chiropractic visits are covered annually under Gold PPO?",
+    "expected_answer_keywords": [
+      "20"
+    ],
+    "expected_doc_id": "GOLD-PPO-2026",
+    "expected_section": "SECTION 5: CHIROPRACTIC SERVICES",
+    "plan_type": "Gold PPO"
+  },
+  {
+    "id": "Q05",
+    "question": "How many chiropractic visits are covered annually under Silver HMO?",
+    "expected_answer_keywords": [
+      "12"
+    ],
+    "expected_doc_id": "SILVER-HMO-2026",
+    "expected_section": "SECTION 5: CHIROPRACTIC SERVICES",
+    "plan_type": "Silver HMO"
+  },
+  {
+    "id": "Q06",
+    "question": "Within how many calendar days should a provider appeal generally be submitted after a denial notice?",
+    "expected_answer_keywords": [
+      "60"
+    ],
+    "expected_doc_id": "CLAIMS-OPS-2026",
+    "expected_section": "SECTION 5: PROVIDER APPEALS",
+    "plan_type": null
+  },
+  {
+    "id": "Q07",
+    "question": "What is the standard clean-claim filing limit for participating providers?",
+    "expected_answer_keywords": [
+      "180"
+    ],
+    "expected_doc_id": "CLAIMS-OPS-2026",
+    "expected_section": "SECTION 2: CLAIM SUBMISSION",
+    "plan_type": null
+  },
+  {
+    "id": "Q08",
+    "question": "Does prior authorization guarantee that a claim will be paid?",
+    "expected_answer_keywords": [
+      "does not",
+      "guarantee"
+    ],
+    "expected_doc_id": "GOLD-PPO-2026",
+    "expected_section": "SECTION 6: MEMBER RESPONSIBILITY",
+    "plan_type": "Gold PPO"
+  },
+  {
+    "id": "Q09",
+    "question": "What clinical information should be included in an advanced imaging authorization request?",
+    "expected_answer_keywords": [
+      "clinical indication",
+      "history"
+    ],
+    "expected_doc_id": "IMG-UM-2026",
+    "expected_section": "SECTION 3: CLINICAL INFORMATION",
+    "plan_type": null
+  },
+  {
+    "id": "Q10",
+    "question": "What is the annual acupuncture visit limit under the Gold PPO plan?",
+    "expected_answer_keywords": [
+      "insufficient"
+    ],
+    "expected_doc_id": null,
+    "expected_section": null,
+    "plan_type": "Gold PPO",
+    "unanswerable": true
+  }
+]
