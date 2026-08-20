@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Multimodal RAG Pipeline — Training Guide</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Segoe UI, Roboto, Arial;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e3a8a, #7c3aed);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 34px
+        }
+
+        h2 {
+            color: #93c5fd;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 6px
+        }
+
+        h3 {
+            color: #c4b5fd
+        }
+
+        section {
+            padding: 35px 8%
+        }
+
+        .card {
+            background: #111827;
+            padding: 20px;
+            border-radius: 14px;
+            margin: 18px 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+        }
+
+        .code {
+            background: #020617;
+            padding: 14px;
+            border-radius: 10px;
+            font-family: monospace;
+            color: #7dd3fc;
+            white-space: pre-wrap;
+        }
+
+        .flow {
+            background: #020617;
+            padding: 18px;
+            border-radius: 14px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 8px;
+            background: #1f2937;
+            color: #93c5fd;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #334155;
+            padding: 10px;
+        }
+
+        th {
+            background: #1e293b;
+        }
+
+        .highlight {
+            color: #34d399;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Enterprise Multimodal RAG Pipeline</h1>
+        <p>Architecture • Execution Order • Production Design</p>
+    </header>
+
+    <section>
+        <h2>1.1. Activate Virtual Environment Setup</h2>
+    </section>
+
+    <section>
+        <h2>1.2. Environment Variables Setup</h2>
+        <div class="card">
+            <h3>Create .env File</h3>
+            <h3>Validate .env is Loaded</h3>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Business Use Case</h2>
+
+        <div class="card">
+            <p>This pipeline enables enterprises to build a <span class="highlight">Unified Knowledge Intelligence
+                    System</span> capable of querying:</p>
+
+            <ul>
+                <li>Documents</li>
+                <li>Tables</li>
+                <li>Images</li>
+                <li>Charts</li>
+                <li>Scanned files</li>
+            </ul>
+
+            <p>Typical production scenarios:</p>
+
+            <ul>
+                <li>Enterprise policy assistant</li>
+                <li>Financial report analyst</li>
+                <li>Engineering document search</li>
+                <li>Legal compliance assistant</li>
+                <li>Knowledge-base copilots</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. End-to-End Execution Flow</h2>
+
+        <div
+            style="background:#020617; padding:30px; border-radius:14px; font-family:monospace; color:#7dd3fc; text-align:center;">
+            <div style="margin:15px 0; font-weight:bold; font-size:16px;">📄 INPUT FILES</div>
+            <div style="margin:5px; font-size:24px;">↓</div>
+            <div
+                style="margin:15px 0; background:#1f2937; padding:10px; border-radius:8px; display:inline-block; min-width:300px;">
+                <b>Read_File_Docling.py</b><br>&nbsp;<br><span style="font-size:12px;">Extract Text | Tables |
+                    Images</span>
+            </div>
+            <div style="margin:5px; font-size:24px;">↓</div>
+            <div style="margin:15px 0; font-size:14px; color:#34d399;"><b>3 Parallel Embedding Pipelines</b></div>
+            <div style="display:inline-block; padding:10px; margin:10px;">
+                <div style="background:#1f2937; padding:8px; border-radius:6px; margin:5px; white-space:nowrap;">📝 Text
+                    Embeddings</div>
+                <div style="margin:5px; font-size:14px;">↓</div>
+                <div style="background:#111827; padding:8px; border-radius:6px; margin:5px;">Chroma DB</div>
+            </div>
+            <div style="display:inline-block; padding:10px; margin:10px;">
+                <div style="background:#1f2937; padding:8px; border-radius:6px; margin:5px; white-space:nowrap;">📊
+                    Table Embeddings</div>
+                <div style="margin:5px; font-size:14px;">↓</div>
+                <div style="background:#111827; padding:8px; border-radius:6px; margin:5px;">Chroma DB</div>
+            </div>
+            <div style="display:inline-block; padding:10px; margin:10px;">
+                <div style="background:#1f2937; padding:8px; border-radius:6px; margin:5px; white-space:nowrap;">🖼️
+                    Image VLM</div>
+                <div style="margin:5px; font-size:14px;">↓</div>
+                <div style="background:#111827; padding:8px; border-radius:6px; margin:5px;">Chroma DB</div>
+            </div>
+            <div style="margin:20px 0; font-size:24px;">↓</div>
+            <div
+                style="margin:15px 0; background:#1f2937; padding:10px; border-radius:8px; display:inline-block; min-width:300px;">
+                <b>Multimodal_Ensemble_Retriever</b><br>&nbsp;<br><span style="font-size:12px;">Query All DBs | Dedupe |
+                    Rerank | LLM</span>
+            </div>
+            <div style="margin:5px; font-size:24px;">↓</div>
+            <div
+                style="margin:15px 0; background:#34d399; color:#000; padding:10px; border-radius:8px; display:inline-block; min-width:300px; font-weight:bold;">
+                ✅ FINAL ANSWER + TRACE LOGS</div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. Execution Order (Mandatory)</h2>
+
+        <div class="card">
+
+            <table>
+                <tr>
+                    <th>Order</th>
+                    <th>Script</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Read_File_Docling.py</td>
+                    <td>Extract text, tables, images from documents</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Table_Embeddings_Langchain_vid.py</td>
+                    <td>Create structured embeddings from tables</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Text_Embeddings_Langchain.py</td>
+                    <td>Chunk + embed document text</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Image_VLM_Embeddings_Langchain_vid.py</td>
+                    <td>Convert images → structured JSON → embeddings</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Multimodal_Ensemble_Retriever_Enterprise.py</td>
+                    <td>Unified search + rerank + LLM answer</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. Module Deep Dive</h2>
+
+        <div class="card">
+            <h3>Module 1 — Document Extraction</h3>
+            <p><b>Script:</b> Read_File_Docling.py</p>
+
+            <p><b>What it does:</b> Reads PDF, DOCX, PPT, and HTML documents. Extracts text, tables, and figures into
+                separate, organized formats ready for processing.</p>
+
+            <p><b>Input required:</b></p>
+            <ul>
+                <li>Documents in <code>INPUT_DIR</code> (PDF, DOCX, PPTX, HTML)</li>
+                <li>.env file with Azure OpenAI credentials (optional for extraction, required later)</li>
+            </ul>
+
+            <p><b>Output produced:</b></p>
+            <ul>
+                <li><code>docling_output/<doc_id>/text/<doc_id>.docx</code> — Extracted text as DOCX</li>
+                <li><code>docling_output/<doc_id>/tables/table_001.csv</code> — Tables as CSV files</li>
+                <li><code>docling_output/<doc_id>/images/figure_001.png</code> — Extracted figures as PNG</li>
+                <li><code>docling_output/<doc_id>/tables.sqlite</code> — All tables in SQLite DB</li>
+                <li><code>docling_output/manifest.json</code> — Metadata index</li>
+            </ul>
+
+            <p><b>Typical runtime:</b> 30-120 seconds per document (depends on size and complexity)</p>
+
+            <p><b>Configuration required:</b> Set <code>INPUT_DIR</code> and <code>OUTPUT_DIR</code> paths in script
+                (search for "PUT YOUR PATH HERE")</p>
+
+            <p><b>Enterprise Advantage:</b> Structured knowledge extraction across formats — no data loss.</p>
+        </div>
+
+
+        <div class="card">
+            <h3>Module 2 — Table Intelligence Engine</h3>
+            <p><b>Script:</b> Table_Embeddings_Langchain_vid.py</p>
+
+            <p><b>What it does:</b> Reads CSV tables extracted by Docling. Applies intelligent row-based chunking with
+                overlap. Converts to human-readable format (markdown or CSV) and creates embeddings for semantic search.
+            </p>
+
+            <p><b>Input required:</b></p>
+            <ul>
+                <li><code>docling_output/*/tables/*.csv</code> — Tables from Module 1</li>
+                <li>.env with <code>AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT</code></li>
+            </ul>
+
+            <p><b>Output produced:</b></p>
+            <ul>
+                <li><code>vector_db_table_chroma/</code> — Chroma vector database with table chunk embeddings</li>
+                <li><code>table_ingest_manifest.json</code> — Metadata about ingested tables</li>
+            </ul>
+
+            <p><b>Typical runtime:</b> 15-60 seconds (depends on table size and count)</p>
+
+            <p><b>Configuration required:</b> Set <code>DOCLING_OUTPUT_DIR</code> and <code>PERSIST_DIR</code> paths
+                (search for "PUT YOUR PATH HERE")</p>
+
+            <p><b>Why special logic?</b> Tables contain relational meaning (rows, columns, headers) not captured by
+                plain text embeddings. Row-based chunking preserves table structure.</p>
+
+            <p><b>Common errors:</b></p>
+            <ul>
+                <li><b>401/404 Azure errors:</b> Check .env file and deployment names</li>
+                <li><b>FileNotFoundError:</b> Verify Module 1 completed successfully; check paths</li>
+            </ul>
+        </div>
+
+
+        <div class="card">
+            <h3>Module 3 — Text Intelligence Engine</h3>
+            <p><b>Script:</b> Text_Embeddings_Langchain.py</p>
+
+            <p><b>What it does:</b> Loads DOCX text extracted by Docling. Applies recursive character-based chunking to
+                preserve semantic boundaries. Generates stable IDs for tracking. Embeds all chunks and stores in vector
+                database.</p>
+
+            <p><b>Input required:</b></p>
+            <ul>
+                <li><code>docling_output/*/text/*.docx</code> — Documents from Module 1</li>
+                <li>.env with <code>AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT</code></li>
+            </ul>
+
+            <p><b>Output produced:</b></p>
+            <ul>
+                <li><code>vector_db_text_chroma/</code> — Chroma vector database with text chunk embeddings</li>
+            </ul>
+
+            <p><b>Typical runtime:</b> 30-120 seconds (depends on document size)</p>
+
+            <p><b>Configuration required:</b> Set <code>DOCLING_OUTPUT_DIR</code> and <code>PERSIST_DIR</code> paths.
+                Adjust <code>CHUNK_SIZE</code> and <code>CHUNK_OVERLAP</code> if needed (search for "PUT YOUR PATH
+                HERE")</p>
+
+            <p><b>Enterprise value:</b> Precise semantic search across thousands of documents with stable chunk IDs for
+                auditing and updates.</p>
+
+        </div>
+
+
+        <div class="card">
+            <h3>Module 4 — Image Intelligence Engine</h3>
+            <p><b>Script:</b> Image_VLM_Embeddings_Langchain_vid.py</p>
+
+            <p><b>What it does:</b> Reads image figures extracted by Docling. Sends each to Azure OpenAI Vision
+                (GPT-4V). Forces structured JSON output describing the image content. Embeds the JSON as text for
+                semantic search without hallucinations.</p>
+
+            <p><b>Input required:</b></p>
+            <ul>
+                <li><code>docling_output/*/images/*.png</code> — Figures from Module 1</li>
+                <li>.env with <code>AZURE_OPENAI_VISION_DEPLOYMENT</code> and
+                    <code>AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT</code>
+                </li>
+            </ul>
+
+            <p><b>Output produced:</b></p>
+            <ul>
+                <li><code>vector_db_image_vlm_chroma/</code> — Chroma vector database with image interpretation
+                    embeddings</li>
+                <li><code>image_vlm_manifest.json</code> — Structured interpretations of each image</li>
+            </ul>
+
+            <p><b>Typical runtime:</b> 60-300 seconds (slower due to Vision LLM API calls; ~2-5 seconds per image)</p>
+
+            <p><b>Configuration required:</b> Set <code>DOCLING_OUTPUT_DIR</code> and <code>PERSIST_DIR</code> paths
+                (search for "PUT YOUR PATH HERE")</p>
+
+            <p><b>Example extracted intelligence:</b></p>
+            <ul>
+                <li>Flowchart meaning and connections</li>
+                <li>Org chart hierarchy and roles</li>
+                <li>Chart values and trends</li>
+                <li>Diagram relationships and labels</li>
+            </ul>
+
+            <p><b>Common errors:</b></p>
+            <ul>
+                <li><b>Vision deployment not found:</b> Ensure <code>gpt-4o</code> or <code>gpt-4-vision</code> is
+                    deployed in Azure</li>
+                <li><b>API rate limits:</b> Large batches may hit rate limits; run in smaller batches</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card">
+            <h3>Module 5 — Enterprise Multimodal Retriever</h3>
+            <p><b>Script:</b> Multimodal_Ensemble_Retriever_Enterprise.py</p>
+
+            <p><b>What it does:</b> Queries all 3 vector databases (text, tables, images) with the user query. Returns
+                top results per modality. Deduplicates and optionally reranks using cross-encoder. Sends ranked context
+                to LLM for final answer. Logs everything for audit and debugging.</p>
+
+            <p><b>Input required:</b></p>
+            <ul>
+                <li><code>vector_db_text_chroma/</code> — From Module 3</li>
+                <li><code>vector_db_table_chroma/</code> — From Module 2</li>
+                <li><code>vector_db_image_vlm_chroma/</code> — From Module 4</li>
+                <li>.env with all Azure OpenAI deployments</li>
+            </ul>
+
+            <p><b>Output produced:</b></p>
+            <ul>
+                <li><code>outputs/run_YYYYMMDD_HHMMSS/</code> — Query artifacts including:
+                    <ul>
+                        <li><code>answer.txt</code> — Final LLM-generated answer</li>
+                        <li><code>context_blocks.csv</code> — All retrieved chunks with scores</li>
+                        <li><code>query_timeline.json</code> — Per-stage timings and costs</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><b>Typical runtime:</b> 10-30 seconds per query (depends on LLM response time)</p>
+
+            <p><b>Configuration required:</b> Ensure all 3 vector DB directories exist (from Modules 2-4). Paths should
+                match what those modules created.</p>
+
+            <p><b>Production Strength:</b></p>
+            <ul>
+                <li>Observability logs and query timelines</li>
+                <li>Cost estimation hooks (configure in script)</li>
+                <li>Audit artifacts (all retrieved sources saved to CSV)</li>
+                <li>Deterministic deduplication and ranking</li>
+                <li>Interactive chat loop for live testing</li>
+            </ul>
+
+            <p><b>Common errors:</b></p>
+            <ul>
+                <li><b>Collection not found:</b> Verify Modules 2-4 completed; vector DBs should exist</li>
+                <li><b>No results returned:</b> Adjust <code>TOP_K_PER_MODALITY</code> or <code>FINAL_CONTEXT_K</code>
+                    parameters</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>6. Architecture Principles Used</h2>
+
+        <div class="card">
+
+            <span class="tag">Modular Design</span>
+            <span class="tag">Deterministic Retrieval</span>
+            <span class="tag">No Silent Failures</span>
+            <span class="tag">Traceability</span>
+            <span class="tag">Enterprise Logging</span>
+            <span class="tag">Stable IDs</span>
+            <span class="tag">Vector Isolation Per Modality</span>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>7. Production Architecture Diagram (Logical)</h2>
+
+        <div style="background:#020617; padding:30px; border-radius:14px; font-family:monospace; color:#7dd3fc;">
+            <table style="width:100%; border-collapse:collapse; text-align:center;">
+                <tr>
+                    <td colspan="3"
+                        style="padding:15px; background:#1f2937; border-radius:8px; font-weight:bold; font-size:16px; margin:10px 0;">
+                        📚 DOCUMENTS</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td style="padding:15px; background:#1f2937; border-radius:6px; margin:5px;">🔍 Text<br>Extraction
+                    </td>
+                    <td style="padding:15px; background:#1f2937; border-radius:6px; margin:5px;">📊 Table<br>Extraction
+                    </td>
+                    <td style="padding:15px; background:#1f2937; border-radius:6px; margin:5px;">🖼️ Image<br>Extraction
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td style="padding:15px; background:#111827; border-radius:6px; margin:5px;">Text<br>Embeddings</td>
+                    <td style="padding:15px; background:#111827; border-radius:6px; margin:5px;">Table<br>Embeddings
+                    </td>
+                    <td style="padding:15px; background:#111827; border-radius:6px; margin:5px;">VLM<br>Interpretations
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                    <td style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td colspan="3"
+                        style="padding:15px; background:#6366f1; border-radius:8px; font-weight:bold; color:#fff;">🗄️
+                        VECTOR DATABASES (Chroma)</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:15px; background:#1f2937; border-radius:8px; font-weight:bold;">🔗
+                        ENSEMBLE RETRIEVER</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:8px; font-size:12px; color:#c4b5fd;">Query All | Merge | Deduplicate
+                        | Score</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:15px; background:#1f2937; border-radius:8px; font-weight:bold;">🎚️
+                        RERANKER (Optional)</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:8px; font-size:12px; color:#c4b5fd;">Cross-Encoder Re-scoring</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:15px; background:#1f2937; border-radius:8px; font-weight:bold;">🤖
+                        LLM GENERATION</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:8px; font-size:12px; color:#c4b5fd;">Azure OpenAI GPT-4o | Generate
+                        Answer</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding:10px; font-size:20px;">↓</td>
+                </tr>
+                <tr>
+                    <td colspan="3"
+                        style="padding:15px; background:#34d399; color:#000; border-radius:8px; font-weight:bold;">✅
+                        ANSWER + 📋 TRACE LOGS + 💰 COST BREAKDOWN</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <p>© 2024 Protiviti Inc. All rights reserved. | <a href="https://www.protiviti.com" target="_blank"
+                style="color:#93c5fd;">www.protiviti.com</a></p>
+
+</body>
+
+</html>
