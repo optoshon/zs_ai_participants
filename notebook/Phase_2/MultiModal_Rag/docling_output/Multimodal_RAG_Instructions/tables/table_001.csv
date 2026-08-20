@@ -1,0 +1,6 @@
+Order,Script,Purpose
+1,Read_File_Docling.py,"Extract text, tables, images from documents"
+2,Table_Embeddings_Langchain_vid.py,Create structured embeddings from tables
+3,Text_Embeddings_Langchain.py,Chunk + embed document text
+4,Image_VLM_Embeddings_Langchain_vid.py,Convert images → structured JSON → embeddings
+5,Multimodal_Ensemble_Retriever_Enterprise.py,Unified search + rerank + LLM answer

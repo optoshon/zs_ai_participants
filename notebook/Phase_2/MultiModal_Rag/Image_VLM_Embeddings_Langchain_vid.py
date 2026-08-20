@@ -133,12 +133,10 @@ def _stable_id(*parts: str) -> str:
 
 def _require_env() -> Dict[str, str]:
     # PUT YOUR PATH HERE: Location of .env file with Azure OpenAI credentials
-    load_dotenv(dotenv_path=Path(
-        r"C:\Users\shonr\OneDrive - Tekframeworks\Secret_keys\.env"), override=False)
+    load_dotenv(dotenv_path=Path(r"C:\Users\ShonrajBallae\OneDrive - Protiviti Member Firm\Documents\learning_and_projects\ZS\zs_ai_participants\notebook\Phase_2\.env"), override=False)
     required = [
         "AZURE_OPENAI_ENDPOINT",
         "AZURE_OPENAI_API_KEY",
-        #"AZURE_OPENAI_API_VERSION",
         "AZURE_OPENAI_EMBEDDING_MODEL",
         "AZURE_OPENAI_MODEL_SECONDARY",
     ]
@@ -248,7 +246,6 @@ def main():
     # Vision client
     vision_client = AzureOpenAI(
         api_key=env["AZURE_OPENAI_API_KEY"],
-        #api_version=env["AZURE_OPENAI_API_VERSION"],
         azure_endpoint=env["AZURE_OPENAI_ENDPOINT"],
     )
 
@@ -256,7 +253,6 @@ def main():
     embeddings = AzureOpenAIEmbeddings(
         azure_endpoint=env["AZURE_OPENAI_ENDPOINT"],
         api_key=env["AZURE_OPENAI_API_KEY"],
-        #api_version=env["AZURE_OPENAI_API_VERSION"],
         azure_deployment=env["AZURE_OPENAI_EMBEDDING_MODEL"],
     )
 

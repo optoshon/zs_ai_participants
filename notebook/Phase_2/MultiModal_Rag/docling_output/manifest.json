@@ -1,0 +1,284 @@
+[
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-001_Employee_Onboarding_Policy.docx",
+    "doc_id": "HR-POL-001_Employee_Onboarding_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\text\\HR-POL-001_Employee_Onboarding_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 31,
+      "tables": 1,
+      "images": 2
+    },
+    "tables": [
+      {
+        "table_index": 1,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\tables\\table_001.csv",
+        "sqlite_table": "HR-POL-001_Employee_Onboarding_Policy__table_001",
+        "rows": 4,
+        "cols": 2
+      }
+    ],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\images\\figure_001.png"
+      },
+      {
+        "figure_index": 2,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-001_Employee_Onboarding_Policy\\images\\figure_002.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-002_Equal_Opportunity_Policy.docx",
+    "doc_id": "HR-POL-002_Equal_Opportunity_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-002_Equal_Opportunity_Policy\\text\\HR-POL-002_Equal_Opportunity_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-002_Equal_Opportunity_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-002_Equal_Opportunity_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 59,
+      "tables": 0,
+      "images": 2
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-002_Equal_Opportunity_Policy\\images\\figure_001.png"
+      },
+      {
+        "figure_index": 2,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-002_Equal_Opportunity_Policy\\images\\figure_002.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-003_Health_Benefits_Policy.docx",
+    "doc_id": "HR-POL-003_Health_Benefits_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-003_Health_Benefits_Policy\\text\\HR-POL-003_Health_Benefits_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-003_Health_Benefits_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-003_Health_Benefits_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 64,
+      "tables": 0,
+      "images": 2
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-003_Health_Benefits_Policy\\images\\figure_001.png"
+      },
+      {
+        "figure_index": 2,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-003_Health_Benefits_Policy\\images\\figure_002.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-004_Training_and_Development_Policy.docx",
+    "doc_id": "HR-POL-004_Training_and_Development_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-004_Training_and_Development_Policy\\text\\HR-POL-004_Training_and_Development_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-004_Training_and_Development_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-004_Training_and_Development_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 59,
+      "tables": 0,
+      "images": 1
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-004_Training_and_Development_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-005_Termination_and_Suspension_Policy.docx",
+    "doc_id": "HR-POL-005_Termination_and_Suspension_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-005_Termination_and_Suspension_Policy\\text\\HR-POL-005_Termination_and_Suspension_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-005_Termination_and_Suspension_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-005_Termination_and_Suspension_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 75,
+      "tables": 0,
+      "images": 1
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-005_Termination_and_Suspension_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-006_Performance_Appraisal_Policy.docx",
+    "doc_id": "HR-POL-006_Performance_Appraisal_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-006_Performance_Appraisal_Policy\\text\\HR-POL-006_Performance_Appraisal_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-006_Performance_Appraisal_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-006_Performance_Appraisal_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 13,
+      "tables": 1,
+      "images": 1
+    },
+    "tables": [
+      {
+        "table_index": 1,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-006_Performance_Appraisal_Policy\\tables\\table_001.csv",
+        "sqlite_table": "HR-POL-006_Performance_Appraisal_Policy__table_001",
+        "rows": 5,
+        "cols": 4
+      }
+    ],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-006_Performance_Appraisal_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-007_General_Work_Policy.docx",
+    "doc_id": "HR-POL-007_General_Work_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-007_General_Work_Policy\\text\\HR-POL-007_General_Work_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-007_General_Work_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-007_General_Work_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 56,
+      "tables": 1,
+      "images": 1
+    },
+    "tables": [
+      {
+        "table_index": 1,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-007_General_Work_Policy\\tables\\table_001.csv",
+        "sqlite_table": "HR-POL-007_General_Work_Policy__table_001",
+        "rows": 4,
+        "cols": 2
+      }
+    ],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-007_General_Work_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-008_Leave_Policy.docx",
+    "doc_id": "HR-POL-008_Leave_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-008_Leave_Policy\\text\\HR-POL-008_Leave_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-008_Leave_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-008_Leave_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 51,
+      "tables": 1,
+      "images": 1
+    },
+    "tables": [
+      {
+        "table_index": 1,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-008_Leave_Policy\\tables\\table_001.csv",
+        "sqlite_table": "HR-POL-008_Leave_Policy__table_001",
+        "rows": 6,
+        "cols": 5
+      }
+    ],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-008_Leave_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-009_Remote_Work_Policy.docx",
+    "doc_id": "HR-POL-009_Remote_Work_Policy",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-009_Remote_Work_Policy\\text\\HR-POL-009_Remote_Work_Policy.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-009_Remote_Work_Policy\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-009_Remote_Work_Policy\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 57,
+      "tables": 0,
+      "images": 1
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-009_Remote_Work_Policy\\images\\figure_001.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\HR-POL-010_Corporate Organization.docx",
+    "doc_id": "HR-POL-010_Corporate_Organization",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\text\\HR-POL-010_Corporate_Organization.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 24,
+      "tables": 0,
+      "images": 3
+    },
+    "tables": [],
+    "images": [
+      {
+        "figure_index": 1,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\images\\figure_001.png"
+      },
+      {
+        "figure_index": 2,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\images\\figure_002.png"
+      },
+      {
+        "figure_index": 3,
+        "path": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\HR-POL-010_Corporate_Organization\\images\\figure_003.png"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\Multimodal_RAG_Instructions.html",
+    "doc_id": "Multimodal_RAG_Instructions",
+    "text_docx": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\Multimodal_RAG_Instructions\\text\\Multimodal_RAG_Instructions.docx",
+    "tables_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\Multimodal_RAG_Instructions\\tables",
+    "images_dir": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\Multimodal_RAG_Instructions\\images",
+    "sqlite_db": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\tables.sqlite",
+    "counts": {
+      "text_blocks": 213,
+      "tables": 2,
+      "images": 0
+    },
+    "tables": [
+      {
+        "table_index": 1,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\Multimodal_RAG_Instructions\\tables\\table_001.csv",
+        "sqlite_table": "Multimodal_RAG_Instructions__table_001",
+        "rows": 5,
+        "cols": 3
+      },
+      {
+        "table_index": 2,
+        "csv": "C:\\Users\\ShonrajBallae\\OneDrive - Protiviti Member Firm\\Documents\\learning_and_projects\\ZS\\zs_ai_participants\\notebook\\Phase_2\\MultiModal_Rag\\docling_output\\Multimodal_RAG_Instructions\\tables\\table_002.csv",
+        "sqlite_table": "Multimodal_RAG_Instructions__table_002",
+        "rows": 18,
+        "cols": 3
+      }
+    ],
+    "images": []
+  }
+]

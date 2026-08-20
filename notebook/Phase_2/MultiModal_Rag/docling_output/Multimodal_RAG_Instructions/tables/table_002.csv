@@ -1,0 +1,46 @@
+0,1,2
+📚 DOCUMENTS,📚 DOCUMENTS,📚 DOCUMENTS
+↓,↓,↓
+"🔍 Text  
+Extraction","📊 Table  
+Extraction","🖼️ Image  
+Extraction"
+↓,↓,↓
+"Text  
+Embeddings","Table  
+Embeddings","VLM  
+Interpretations"
+↓,↓,↓
+"🗄️
+                        VECTOR DATABASES (Chroma)","🗄️
+                        VECTOR DATABASES (Chroma)","🗄️
+                        VECTOR DATABASES (Chroma)"
+↓,↓,↓
+"🔗
+                        ENSEMBLE RETRIEVER","🔗
+                        ENSEMBLE RETRIEVER","🔗
+                        ENSEMBLE RETRIEVER"
+"Query All | Merge | Deduplicate
+                        | Score","Query All | Merge | Deduplicate
+                        | Score","Query All | Merge | Deduplicate
+                        | Score"
+↓,↓,↓
+"🎚️
+                        RERANKER (Optional)","🎚️
+                        RERANKER (Optional)","🎚️
+                        RERANKER (Optional)"
+Cross-Encoder Re-scoring,Cross-Encoder Re-scoring,Cross-Encoder Re-scoring
+↓,↓,↓
+"🤖
+                        LLM GENERATION","🤖
+                        LLM GENERATION","🤖
+                        LLM GENERATION"
+"Azure OpenAI GPT-4o | Generate
+                        Answer","Azure OpenAI GPT-4o | Generate
+                        Answer","Azure OpenAI GPT-4o | Generate
+                        Answer"
+↓,↓,↓
+"✅
+                        ANSWER + 📋 TRACE LOGS + 💰 COST BREAKDOWN","✅
+                        ANSWER + 📋 TRACE LOGS + 💰 COST BREAKDOWN","✅
+                        ANSWER + 📋 TRACE LOGS + 💰 COST BREAKDOWN"

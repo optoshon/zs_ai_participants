@@ -3,4 +3,4 @@ notebook/Phase_2/.env
 notebook/Phase_1/02_prompt_engineering_cost_design_trainer_annotated.ipynb
 requirements.txt
 *.pptx
-*.docx
+#*.docx
